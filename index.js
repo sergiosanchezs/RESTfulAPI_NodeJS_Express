@@ -1,0 +1,26 @@
+import express from 'express';
+import routes from './src/routes/crmRoutes';
+import mongoose from 'mongoose';
+import bodyParser from 'body-parser';
+import dotenv from 'dotenv';
+dotenv.config();
+
+const app = express();
+const PORT = process.env.PORT;
+
+// mongoose connection
+mongoose.Promise = global.Promise;
+mongoose.connect(process.env.DB_HOST, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
+
+// bodyParser setup
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
+routes(app);
+
+app.get('/', (req, res) => res.send(`Node & Express server running on port ${PORT}`));
+
+app.listen(PORT, () => console.log(`Your server is running on port ${PORT}`));
