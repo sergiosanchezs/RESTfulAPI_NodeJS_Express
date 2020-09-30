@@ -9,7 +9,7 @@ export const ContactSchema = new Schema({
   },
   lastName: {
     type: String,
-    required: 'Enter a first name',
+    required: 'Enter a last name',
   },
   email: {
     type: String,
