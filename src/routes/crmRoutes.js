@@ -6,6 +6,7 @@ import {
   deleteContact,
 } from '../controllers/crmController';
 import { login, loginRequired, register } from '../controllers/userController';
+import { contactValidation } from '../middlewares/validation-middleware';
 
 const routes = app => {
   app
@@ -21,7 +22,7 @@ const routes = app => {
       getContact,
     )
     // Post endpoint
-    .post(loginRequired, addNewContact);
+    .post(loginRequired, contactValidation, addNewContact);
 
   app
     .route('/contact/:contactId')
