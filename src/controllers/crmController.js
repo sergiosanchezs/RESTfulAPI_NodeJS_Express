@@ -1,10 +1,13 @@
 import mongoose from 'mongoose';
 import { ContactSchema } from '../models/crmModel';
+import validator from 'validator';
 
 const Contact = mongoose.model('Contact', ContactSchema);
 
 export const addNewContact = (req, res) => {
-  let newContact = new Contact(req.body);
+  const { firstName, lastName, email, company, phone } = req.body;
+  let newContactObj = { firstName, lastName, email, company, phone };
+  let newContact = new Contact(newContactObj);
   newContact.save((err, contact) => {
     if (err) res.send(err);
     res.json(contact);

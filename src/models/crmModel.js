@@ -5,14 +5,15 @@ const Schema = mongoose.Schema;
 export const ContactSchema = new Schema({
   firstName: {
     type: String,
-    required: 'Enter a first name',
+    required: true,
   },
   lastName: {
     type: String,
-    required: 'Enter a last name',
+    required: true,
   },
   email: {
     type: String,
+    required: true,
   },
   company: {
     type: String,
