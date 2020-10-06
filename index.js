@@ -3,12 +3,15 @@ import routes from './src/routes/crmRoutes';
 import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
 import jsonwebtoken from 'jsonwebtoken';
+import helmet from 'helmet';
 import dotenv from 'dotenv';
 dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT;
 const SECRET_KEY = process.env.SECRET_KEY;
+
+app.use(helmet());
 
 // mongoose connection
 mongoose.Promise = global.Promise;
