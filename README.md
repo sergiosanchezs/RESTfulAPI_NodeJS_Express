@@ -6,6 +6,6 @@ This repository contains code of the following courses:
 
 - 'Node.js: Securing RESTful APIs' on [![Linkedin Badge](https://img.shields.io/badge/-SecuringNodeRESTfulAPIs-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/learning/node-js-securing-restful-apis-2/)](https://www.linkedin.com/learning/node-js-securing-restful-apis-2/)
 
-- 'Node.js: Security' on [![Linkedin Badge](https://img.shields.io/badge/-NodeJS-Security-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/learning/node-js-security/encrypt-user-data-and-session-management)](https://www.linkedin.com/learning/node-js-security/encrypt-user-data-and-session-management)
+- 'Node.js: Security' on [![Linkedin Badge](https://img.shields.io/badge/-NodeJsSecurity-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/learning/node-js-security/encrypt-user-data-and-session-management)](https://www.linkedin.com/learning/node-js-security/encrypt-user-data-and-session-management)
 
 This was done by the tutorials aforementioned with some personal adaptations.
